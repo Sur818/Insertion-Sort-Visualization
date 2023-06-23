@@ -9,21 +9,16 @@ let array = [];
 let step_containerNo = 0;
 
 function addNumber() {
-  if (input_box) {
-    let getData = input_box.value.trim();
-    console.log(getData);
-    if (getData !== "") {
-      if (/^-?\d+$/.test(getData)) {
+    let getData = input_box.value;
         let number = parseInt(getData);
+        if(!Number.isNaN(number))
+        {
         let box = document.createElement("div");
         box.appendChild(document.createTextNode(number));
         box.setAttribute("class", "box");
         document.querySelector(".input-section").appendChild(box);
         array.push(number);
-      } else {
-        console.log("Invalid input. Please enter a valid number.");
-      }
-    }
+      } 
     input_box.value = "";
     console.log(array);
   }
@@ -193,4 +188,5 @@ function resetData() {
   array=[];
   input_section.innerHTML = "";
   output_section.innerHTML = "";
+  window.location.reload();
 }
