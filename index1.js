@@ -10,7 +10,7 @@ let step_containerNo = 0;
 
 function addNumber() {
   let getData = input_box.value;
-  if(getData && getData.trim() !== ""){
+  if(getData){
   getData = parseInt(getData);
   if (!Number.isNaN(getData)) {
     let box = document.createElement("div");
@@ -20,6 +20,7 @@ function addNumber() {
     array.push(getData);
   }
   }
+  input_box.value = ""; 
   console.log(array);
 }
 
