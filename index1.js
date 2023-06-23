@@ -10,7 +10,7 @@ let step_containerNo = 0;
 
 function addNumber() {
   let getData = input_box.value;
-  if(getData){
+  if(getData && getData.trim() !== ""){
   getData = parseInt(getData);
   if (!Number.isNaN(getData)) {
     let box = document.createElement("div");
