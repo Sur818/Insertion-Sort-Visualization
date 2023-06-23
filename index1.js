@@ -180,6 +180,7 @@ function swap(element, target) {
 }
 
 function resetData() {
+  array=[];
   input_section.innerHTML = "";
   output_section.innerHTML = "";
 }
