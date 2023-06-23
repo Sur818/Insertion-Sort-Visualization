@@ -9,19 +9,20 @@ let array = [];
 let step_containerNo = 0;
 
 function addNumber() {
-    let getData = input_box.value;
-        let number = parseInt(getData);
-        if(!Number.isNaN(number))
-        {
-        let box = document.createElement("div");
-        box.appendChild(document.createTextNode(number));
-        box.setAttribute("class", "box");
-        document.querySelector(".input-section").appendChild(box);
-        array.push(number);
-      } 
-    input_box.value = "";
-    console.log(array);
+  let getData = input_box.value;
+  if(getData){
+  getData = parseInt(getData);
+  if (getData && !Number.isNaN(getData)) {
+  if (!Number.isNaN(getData)) {
+    let box = document.createElement("div");
+    box.appendChild(document.createTextNode(getData));
+    box.setAttribute("class", "box");
+    document.querySelector(".input-section").appendChild(box);
+    array.push(getData);
   }
+  }
+  input_box.value = "";
+  console.log(array);
 }
 
 
