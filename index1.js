@@ -21,10 +21,10 @@ function addNumber() {
     array.push(getData);
   }
   }
+  }
   input_box.value = "";
   console.log(array);
 }
-
 
 
 function sleep(ms) {
