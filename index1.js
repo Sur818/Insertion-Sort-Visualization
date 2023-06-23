@@ -11,6 +11,7 @@ let step_containerNo = 0;
 function addNumber() {
   if (input_box) {
     let getData = input_box.value.trim();
+    console.log(getData);
     if (getData !== "") {
       if (/^-?\d+$/.test(getData)) {
         let number = parseInt(getData);
