@@ -10,19 +10,27 @@ let step_containerNo = 0;
 
 function addNumber() {
   let getData = input_box.value;
-  if(getData){
-  getData = parseInt(getData);
-  if (!Number.isNaN(getData)) {
-    let box = document.createElement("div");
-    box.appendChild(document.createTextNode(getData));
-    box.setAttribute("class", "box");
-    document.querySelector(".input-section").appendChild(box);
-    array.push(getData);
+ function addNumber() {
+  if (input_box) {
+    let getData = input_box.value.trim();
+    if (getData !== "") {
+      if (/^-?\d+$/.test(getData)) {
+        let number = parseInt(getData);
+        let box = document.createElement("div");
+        box.appendChild(document.createTextNode(number));
+        box.setAttribute("class", "box");
+        document.querySelector(".input-section").appendChild(box);
+        array.push(number);
+      } else {
+        console.log("Invalid input. Please enter a valid number.");
+      }
+    }
+    input_box.value = "";
+    console.log(array);
   }
-  }
-  input_box.value = ""; 
-  console.log(array);
 }
+}
+
 
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
