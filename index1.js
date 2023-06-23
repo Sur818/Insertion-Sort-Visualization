@@ -9,8 +9,6 @@ let array = [];
 let step_containerNo = 0;
 
 function addNumber() {
-  let getData = input_box.value;
- function addNumber() {
   if (input_box) {
     let getData = input_box.value.trim();
     if (getData !== "") {
@@ -29,7 +27,7 @@ function addNumber() {
     console.log(array);
   }
 }
-}
+
 
 
 function sleep(ms) {
