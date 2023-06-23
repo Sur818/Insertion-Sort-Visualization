@@ -11,7 +11,7 @@ let step_containerNo = 0;
 function addNumber() {
   let getData = input_box.value;
   getData = parseInt(getData);
-  if (!Number.isNaN(getData)) {
+  if (getData && !Number.isNaN(getData)) {
     let box = document.createElement("div");
     box.appendChild(document.createTextNode(getData));
     box.setAttribute("class", "box");
